@@ -11,7 +11,7 @@ export const calculateServicePrice = (
           (service) => service.name === selectedService
         );
 
-        if (serviceData.requiredServices) {
+        if (serviceData?.requiredServices) {
           return isServiceDisabled(
             serviceData.requiredServices,
             selectedServices
@@ -19,7 +19,7 @@ export const calculateServicePrice = (
             ? accServices
             : accServices + serviceData.price;
         }
-        return accServices + serviceData.price;
+        return accServices + serviceData?.price;
       },
       0
     );
@@ -101,7 +101,7 @@ export const getServices = (data) => {
 
   for (const year in data) {
     const yearData = data[year];
-    if (yearData.services) {
+    if (yearData?.services) {
       yearData.services.forEach((service) => {
         const { name: serviceName, requiredServices = [] } = service;
 

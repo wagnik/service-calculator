@@ -1,6 +1,7 @@
 .app {
   position: relative;
-  height: calc(100vh - 4rem);
+  min-height: calc(100vh - 4rem);
+  height: 100%;
   padding: 2rem;
   margin: 0 15rem;
   box-shadow: 5px 5px 12px 0px rgba(148, 148, 165, 1);

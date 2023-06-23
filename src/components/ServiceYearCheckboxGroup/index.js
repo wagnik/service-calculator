@@ -28,7 +28,7 @@ export const ServiceYearCheckboxGroup = (props) => {
   return (
     <FormGroup>
       <FormLabel>{props.label}</FormLabel>
-      {props.options.map((option, index) => {
+      {props.options?.map((option, index) => {
         const isService = !!props.services.find(
           (service) => service.name === option.name
         );

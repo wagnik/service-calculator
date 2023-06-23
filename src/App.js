@@ -18,7 +18,7 @@ import {
   NO_YEARS_SELECTED_ERROR,
   RESET_BUTTON_TEXT,
 } from "./constans";
-import DiscountInfo from "./components/DiscountInfo";
+import { DiscountInfo } from "./components/DiscountInfo";
 import { ServiceYearCheckboxGroup } from "./components/ServiceYearCheckboxGroup";
 
 function App() {
@@ -64,7 +64,7 @@ function App() {
   }, [selectedYears, selectedServices]);
 
   return (
-    <div className="app">
+    <div className="app" data-testid="app">
       <header className="app-header">{APP_HEADER_TEXT}</header>
       <div className="app-content">
         <div className="service-years-container">
