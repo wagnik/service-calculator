@@ -1,0 +1,104 @@
+{
+  "2023": {
+    "services": [
+      {
+        "name": "Internet",
+        "price": 39
+      },
+      {
+        "name": "Telewizja",
+        "price": 49
+      },
+      {
+        "name": "Abonament telefoniczny",
+        "price": 29
+      },
+      {
+        "name": "Dekoder 4K",
+        "price": 29,
+        "requiredServices": ["Telewizja"]
+      }
+    ],
+    "packages": [
+      {
+        "name": "Internet + telewizja. Dodatkowo dekoder 4K dostępny za darmo",
+        "price": 79,
+        "services": ["Internet", "Telewizja"],
+        "freeServices": ["Dekoder 4K"]
+      },
+      {
+        "name": "Internet + Abonament telefoniczny",
+        "price": 64,
+        "services": ["Internet", "Abonament telefoniczny"]
+      }
+    ]
+  },
+  "2024": {
+    "services": [
+      {
+        "name": "Internet",
+        "price": 49
+      },
+      {
+        "name": "Telewizja",
+        "price": 49
+      },
+      {
+        "name": "Abonament telefoniczny",
+        "price": 29
+      },
+      {
+        "name": "Dekoder 4K",
+        "price": 29,
+        "requiredServices": ["Telewizja"]
+      }
+    ],
+    "packages": [
+      {
+        "name": "Internet + telewizja. W tym pakiecie dekoder 4K dostępny za darmo",
+        "price": 89,
+        "services": ["Internet", "Telewizja"],
+        "freeServices": ["Dekoder 4K"]
+      },
+      {
+        "name": "Internet + Abonament telefoniczny",
+        "price": 64,
+        "services": ["Internet", "Abonament telefoniczny"]
+      }
+    ]
+  },
+  "2025": {
+    "services": [
+      {
+        "name": "Internet",
+        "price": 59
+      },
+      {
+        "name": "Telewizja",
+        "price": 59
+      },
+      {
+        "name": "Abonament telefoniczny",
+        "price": 29
+      },
+      {
+        "name": "Dekoder 4K",
+        "price": 29,
+        "requiredServices": ["Telewizja"]
+      }
+    ],
+    "packages": [
+      {
+        "name": "Internet + telewizja. W tym pakiecie dekoder 4K dostępny za darmo",
+        "price": 99,
+        "services": ["Internet", "Telewizja"],
+        "freeServices": ["Dekoder 4K"]
+      },
+      {
+        "name": "Internet + abonament telefoniczny",
+        "price": 64,
+        "services": ["Internet", "Abonament telefoniczny"]
+      }
+    ]
+  }
+}
