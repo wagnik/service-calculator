@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { DiscountInfo } from "./index";
+import { DiscountInfo } from "./DiscountInfo";
 
 describe("DiscountInfo", () => {
   const discount = {

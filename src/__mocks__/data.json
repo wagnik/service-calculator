@@ -1,0 +1,36 @@
+{
+  "2023": {
+    "services": [
+      { "name": "Usługa A", "price": 100 },
+      { "name": "Usługa B", "price": 200, "requiredServices": ["Usługa A"] },
+      { "name": "Usługa C", "price": 50 },
+      { "name": "Usługa D", "price": 200 }
+    ],
+    "packages": [
+      {
+        "name": "Pakiet 1",
+        "price": 250,
+        "services": ["Usługa A", "Usługa B"],
+        "freeServices": ["Usługa C"]
+      },
+      { "name": "Pakiet 2", "price": 150, "services": ["Usługa A", "Usługa D"] }
+    ]
+  },
+  "2024": {
+    "services": [
+      { "name": "Usługa A", "price": 150 },
+      { "name": "Usługa B", "price": 250, "requiredServices": ["Usługa A"] },
+      { "name": "Usługa C", "price": 50 },
+      { "name": "Usługa D", "price": 250 }
+    ],
+    "packages": [
+      {
+        "name": "Pakiet 1",
+        "price": 350,
+        "services": ["Usługa A", "Usługa B"],
+        "freeServices": ["Usługa C"]
+      },
+      { "name": "Pakiet 2", "price": 250, "services": ["Usługa A", "Usługa D"] }
+    ]
+  }
+}

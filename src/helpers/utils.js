@@ -26,7 +26,6 @@ export const calculateServicePrice = (
 
     return accYears + yearTotalPrice;
   }, 0);
-
   const totalDiscount = discounts?.reduce((accDiscount, discount) => {
     return accDiscount + discount.price;
   }, 0);
@@ -55,7 +54,7 @@ export const calculateDiscount = (data, year, selectedServices) => {
         const serviceData = data[year]?.services?.find(
           (service) => service.name === selectedService
         );
-        return accTotalPrice + (serviceData?.price || 0);
+        return accTotalPrice + serviceData?.price;
       },
       0
     );
@@ -66,7 +65,7 @@ export const calculateDiscount = (data, year, selectedServices) => {
           const freeServiceData = data[year].services.find(
             (service) => service.name === freeService
           );
-          return accFreeServiceDiscount + (freeServiceData?.price || 0);
+          return accFreeServiceDiscount + freeServiceData?.price;
         },
         0
       );
@@ -101,7 +100,7 @@ export const getServices = (data) => {
 
   for (const year in data) {
     const yearData = data[year];
-    if (yearData?.services) {
+    if (yearData.services) {
       yearData.services.forEach((service) => {
         const { name: serviceName, requiredServices = [] } = service;
 
@@ -112,7 +111,7 @@ export const getServices = (data) => {
 
   return Object.keys(transformedData).map((serviceName) => ({
     name: serviceName,
-    requiredService: transformedData[serviceName],
+    requiredServices: transformedData[serviceName],
   }));
 };
 
@@ -120,5 +119,5 @@ export const getYears = (data) => {
   return Object.keys(data).map((year) => ({ name: year }));
 };
 
-export const isServiceDisabled = (requiredService, selectedServices) =>
-  !requiredService?.every((r) => selectedServices.includes(r));
+export const isServiceDisabled = (requiredServices, selectedServices) =>
+  !requiredServices?.every((r) => selectedServices.includes(r));

@@ -1,4 +1,4 @@
-.app {
+.service-calculator {
   position: relative;
   min-height: calc(100vh - 4rem);
   height: 100%;
@@ -7,7 +7,7 @@
   box-shadow: 5px 5px 12px 0px rgba(148, 148, 165, 1);
 }
 
-.app-header {
+.service-calculator-header {
   font-size: 22px;
   font-weight: 600;
   text-align: center;
@@ -17,7 +17,7 @@
   border-bottom: #1976d2 1px solid;
 }
 
-.app-content {
+.service-calculator-content {
   margin: 2rem 0;
 }
 
@@ -47,18 +47,21 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .app {
-    margin: 0 10rem;
+  .service-calculator {
+    margin: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .app {
+  .service-calculator {
     margin: 0;
-    padding: 0 1rem 5rem;
-    height: 100%;
+    padding: 1rem 1rem 5rem;
+    min-height: 100%;
     box-shadow: none;
   }
+  .service-years-container {
+    margin-left: 2rem;
+  }  
   .price {
     bottom: 1.5rem;
     font-size: 16px;

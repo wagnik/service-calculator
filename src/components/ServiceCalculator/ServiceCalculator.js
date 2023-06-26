@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
-import data from "./data.json";
+import data from "../../data.json";
 import {
   calculateDiscount,
   calculateServicePrice,
   getServices,
   getYears,
-} from "./utils";
+} from "../../helpers/utils";
 
 import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
 
-import "./App.css";
+import "./ServiceCalculator.css";
 import {
   APP_HEADER_TEXT,
   FINAL_PRICE_LABEL,
   NO_YEARS_SELECTED_ERROR,
   RESET_BUTTON_TEXT,
-} from "./constans";
-import { DiscountInfo } from "./components/DiscountInfo";
-import { ServiceYearCheckboxGroup } from "./components/ServiceYearCheckboxGroup";
+} from "../../helpers/constans";
+import { DiscountInfo } from "../DiscountInfo";
+import { ServiceYearCheckboxGroup } from "../ServiceYearCheckboxGroup";
 
-function App() {
+export const ServiceCalculator = () => {
   const [selectedYears, setSelectedYears] = useState([]);
   const [selectedServices, setSelectedServices] = useState([]);
   const [discounts, setDiscounts] = useState([]);
@@ -64,9 +64,9 @@ function App() {
   }, [selectedYears, selectedServices]);
 
   return (
-    <div className="app" data-testid="app">
-      <header className="app-header">{APP_HEADER_TEXT}</header>
-      <div className="app-content">
+    <div className="service-calculator" data-testid="service-calculator">
+      <header className="service-calculator-header">{APP_HEADER_TEXT}</header>
+      <div className="service-calculator-content">
         <div className="service-years-container">
           <FormControl
             required
@@ -103,7 +103,11 @@ function App() {
         </div>
         {discounts?.length > 0 &&
           discounts.map((discount, index) => (
-            <DiscountInfo discount={discount} index={index} />
+            <DiscountInfo
+              key={index}
+              dataTestId={"discount-info"}
+              discount={discount}
+            />
           ))}
         <div className="price">{`${FINAL_PRICE_LABEL} ${finalPrice} zł`}</div>
         <div className="button-container">
@@ -120,6 +124,4 @@ function App() {
       </div>
     </div>
   );
-}
-
-export default App;
+};
