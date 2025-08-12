@@ -8,7 +8,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage",
-    "eject": "react-scripts eject",
+    "eject": "react-scripts eject", 
     "prettier": "npx prettier --write ."
   },
   "dependencies": {
