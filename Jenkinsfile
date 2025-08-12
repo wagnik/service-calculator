@@ -10,18 +10,18 @@ pipeline {
     stage('Lint') {
       steps {
         echo 'Running prettier...'
-        sh 'npx prettier'
+        sh 'npm run prettier'
       }
     }
     stage('Build') {
       steps {
-        echo 'Building the project...',
+        echo 'Building the project...'
         sh 'npm run build'
       }
     }
     stage('Test') {
       steps {
-        echo 'Starting tests...',
+        echo 'Starting tests...'
         sh 'npm test'
         sh 'npm run test:coverage'
       }
