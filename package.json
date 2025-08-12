@@ -1,6 +1,6 @@
 {
   "name": "service-calculator",
-  "description": "A React application for calculating service costs",
+  "description": "React application for calculating service costs",
   "version": "0.2.0",
   "private": true,
   "scripts": {
