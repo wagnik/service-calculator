@@ -30,6 +30,8 @@ export const ServiceCalculator = () => {
   const years = getYears(data);
   const isNoYearsSelected = selectedYears.length === 0;
 
+  console.log("selectedYears", selectedYears);
+
   const finalPrice =
     isNoYearsSelected || selectedServices.length === 0
       ? 0
